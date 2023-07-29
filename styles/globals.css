@@ -45,3 +45,7 @@
 .purple {
 	@apply bg-[#8A266A];
 }
+
+iframe {
+	@apply rounded-[15px];
+}

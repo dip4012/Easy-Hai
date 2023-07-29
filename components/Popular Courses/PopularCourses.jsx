@@ -83,7 +83,7 @@ const PopularCourses = () => {
 			</div>
 
 			{/* courses list */}
-			<div className="p-[40px] flex justify-center items-center gap-[25px] flex-wrap mt-[61px] max-[767px]:justify-start max-[767px]:flex-nowrap max-[767px]:overflow-x-scroll no-scrollbar">
+			<div className="px-[20px] py-[25px] flex justify-center items-center gap-[25px] flex-wrap mt-[61px] max-[767px]:justify-start max-[767px]:flex-nowrap max-[767px]:overflow-x-scroll no-scrollbar">
 				{courses.map((course) => (
 					<CourseCard key={course.title} course={course} />
 				))}

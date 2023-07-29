@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const CourseCard = ({ course }) => {
 	return (
-		<div className="w-[296px] h-[361px] rounded-[14px] bg-white shadow-[0_10px_60px_0_rgba(38,45,118,0.08)] flex-shrink-0">
+		<div className="w-[296px] h-[361px] rounded-[14px] bg-white shadow-[0_4px_25px_0_rgba(0,0,0,0.10)] flex-shrink-0">
 			{/* course thumbnail image */}
 			<Image
 				src="/assets/images/dummy_course_image.png"
