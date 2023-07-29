@@ -15,6 +15,7 @@ module.exports = {
 			fontFamily: {
 				Nunito: ["Nunito Sans", "sans-serif"],
 				Raleway: ["Raleway", "sans-serif"],
+				Inter: ["Inter", "sans-serif"],
 			},
 		},
 	},

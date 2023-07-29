@@ -3,7 +3,7 @@ import React from "react"
 
 const NavBar = () => {
 	return (
-		<nav className="w-full h-[70px] pb-[11px] flex justify-between items-center">
+		<nav className="w-full h-[70px] pb-[11px] flex justify-between items-center max-[767px]:px-[20px]">
 			{/* company logo */}
 			<div className="text-[#E7D2FF] font-Raleway text-lg font-bold tracking-[0.36px] cursor-pointer">
 				LOGO HERE
