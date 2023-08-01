@@ -39,10 +39,7 @@ const Reasoning = () => {
 		<div className="w-full pt-[74px] pb-[93.9px] px-[92.14px] bg-[#262543] relative z-0 max-[767px]:pt-[38px] max-[767px]:pb-[96.56px] max-[767px]:px-[20px]">
 			{/* section header */}
 			<h1 className="text-white w-full font-Raleway text-5xl font-bold tracking-[0.768px] flex flex-wrap justify-center items-center gap-[4px] max-[767px]:justify-start max-[767px]:text-2xl max-[767px]:font-medium">
-				<div>Why Learn</div>
-				<div className="relative">
-					With <span className="section_graphic">Easy Hai?</span>
-				</div>
+				<span className="section_graphic">Why Learn With Easy Hai?</span>
 			</h1>
 
 			<p className="w-full text-center mt-[54px] text-white font-Raleway text-sm font-normal tracing-[0.15px] max-[767px]:text-left">
