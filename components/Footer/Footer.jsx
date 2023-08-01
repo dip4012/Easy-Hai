@@ -56,7 +56,7 @@ const Footer = () => {
 				</div>
 
 				{/* newletter box */}
-				<div className="max-w-[430px] min-w-[305px] flex-1 flex flex-col gap-[20px] justify-start items-center max-[767px]:items-start">
+				<div className="max-w-[430px] min-w-[305px] flex-1 flex flex-col gap-[20px] justify-start items-center max-[767px]:items-start max-[1042px]:max-w-none">
 					<p className="text-white font-Raleway text-sm font-normal">
 						Stay up to date with the latest courses
 					</p>
