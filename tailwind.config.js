@@ -16,6 +16,7 @@ module.exports = {
 				Nunito: ["Nunito Sans", "sans-serif"],
 				Raleway: ["Raleway", "sans-serif"],
 				Inter: ["Inter", "sans-serif"],
+				Roboto: ["Roboto", "sans-serif"],
 			},
 		},
 	},
