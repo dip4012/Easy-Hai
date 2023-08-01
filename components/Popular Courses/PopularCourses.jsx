@@ -69,7 +69,7 @@ const PopularCourses = () => {
 								selectedCategory === category
 									? "bg-[#350B63] text-white border-none"
 									: "bg-white text-[#818C96] border border-solid border-[#C4C4C4]"
-							} rounded-[5px] whitespace-nowrap cursor-pointer`}
+							} rounded-[5px] whitespace-nowrap cursor-pointer text-xs font-medium font-Raleway`}
 							key={category}
 							onClick={() => setSelectedCategory(category)}
 						>
