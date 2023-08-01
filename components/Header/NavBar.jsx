@@ -40,11 +40,11 @@ const NavBar = () => {
 				</div>
 
 				{/* Signin action buttons */}
-				<div className="h-full flex gap-[31.58px] justify-center items-center">
-					<button className="h-full px-[40px] py-auto bg-white rounded-[10px] text-[#350B63] font-Raleway text-base font-medium tracking-[0.32px] cursor-pointer">
+				<div className="h-full flex gap-[31.58px] justify-center items-center max-[767px]:gap-[15.76px]">
+					<button className="shrink-0 px-[40px] py-[20px] bg-white rounded-[10px] text-[#350B63] font-Raleway text-base font-medium tracking-[0.32px] cursor-pointer max-[767px]:text-[7px] max-[767px]:px-[18.4px] max-[767px]:py-[9.18px]">
 						LOG IN
 					</button>
-					<button className="h-full px-[40px] py-auto bg-[#350B63] rounded-[10px] text-white font-Raleway text-base font-medium tracking-[0.32px] cursor-pointer">
+					<button className="shrink-0 px-[40px] py-[20px] bg-[#350B63] rounded-[10px] text-white font-Raleway text-base font-medium tracking-[0.32px] cursor-pointer max-[767px]:text-[7px] max-[767px]:px-[18.4px] max-[767px]:py-[9.18px]">
 						SIGN UP
 					</button>
 				</div>

@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Review = ({ review }) => {
 	return (
-		<div className="w-full h-[462px] px-[65px] pt-[55px] pb-[36px] bg-[#E8E0D5] mt-[52px] flex flex-col justify-start gap-[21px] overflow-y-scroll no-scrollbar">
+		<div className="w-full h-[462px] px-[65px] pt-[55px] pb-[36px] rounded-[15px] bg-[#E8E0D5] mt-[52px] flex flex-col justify-start gap-[21px] overflow-y-scroll no-scrollbar max-[767px]:px-[21px]">
 			{review.messages.map((message) => (
 				<div
 					key={message}
@@ -23,10 +23,10 @@ const Review = ({ review }) => {
 							message.sender === "owner" ? "right-full" : "left-full"
 						} top-0`}
 					/>
-					<p className="w-full text-black text-base font-normal font-Roboto">
+					<p className="w-full text-black text-base font-normal font-Roboto max-[767px]:text-[10px]">
 						{message.text}
 					</p>
-					<p className="w-full text-[#9DA3A7] text-right font-Roboto text-sm font-normal">
+					<p className="w-full text-[#9DA3A7] text-right font-Roboto text-sm font-normal max-[767px]:text-[9px]">
 						{new Date().toLocaleString("en-US", {
 							hour: "numeric",
 							minute: "numeric",

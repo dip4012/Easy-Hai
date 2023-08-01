@@ -11,8 +11,13 @@ const VideoPlayer = () => {
 				width={"100%"}
 				height={"100%"}
 				playIcon={
-					<button className="w-[80px] h-[80px] bg-[#350B63] text-white rounded-full flex justify-center items-center">
-						<Image src="/assets/icons/play_icon.svg" width={32} height={32} />
+					<button className="w-[10%] aspect-square max-w-[80px] max-h-[80px] bg-[#350B63] text-white rounded-full flex justify-center items-center">
+						<Image
+							src="/assets/icons/play_icon.svg"
+							width={32}
+							height={32}
+							className=""
+						/>
 					</button>
 				}
 				light={

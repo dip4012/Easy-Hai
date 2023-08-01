@@ -56,16 +56,16 @@ const Footer = () => {
 				</div>
 
 				{/* newletter box */}
-				<div className="w-[430px] flex flex-col gap-[20px] justify-start items-center max-[767px]:items-start">
+				<div className="max-w-[430px] min-w-[305px] flex-1 flex flex-col gap-[20px] justify-start items-center max-[767px]:items-start">
 					<p className="text-white font-Raleway text-sm font-normal">
 						Stay up to date with the latest courses
 					</p>
 
-					<div className="min-w-max w-full bg-white rounded-[15px] flex justify-center items-center p-[11px]">
+					<div className="w-full bg-white rounded-[15px] flex justify-center items-center p-[11px]">
 						<input
 							type="email"
 							placeholder="Email"
-							className="bg-white flex-1 rounded-[15px] focus:outline-none placeholder:text-[#8940FF] placeholder:font-Raleway placeholder:text-base placeholder:font-normal"
+							className="bg-white w-full rounded-[15px] focus:outline-none placeholder:text-[#8940FF] placeholder:font-Raleway placeholder:text-base placeholder:font-normal"
 						/>
 						<button className="bg-[#350B63] px-[50px] py-[13px] rounded-[10px] text-white font-Raleway text-base font-normal">
 							Send
