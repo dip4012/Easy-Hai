@@ -47,10 +47,12 @@ const Reasoning = () => {
 			</p>
 
 			{/* list points */}
-			<div className="w-full mt-[100px] flex gap-[55px] justify-start items-start overflow-x-scroll no-scrollbar max-[767px]:justify-start">
-				{listItems.map((item) => (
-					<QualityCard item={item} key={item.title} />
-				))}
+			<div className="w-full flex justify-center items-center">
+				<div className="mt-[100px] flex gap-[55px] justify-start items-start overflow-x-scroll no-scrollbar max-[767px]:justify-start">
+					{listItems.map((item) => (
+						<QualityCard item={item} key={item.title} />
+					))}
+				</div>
 			</div>
 		</div>
 	)
