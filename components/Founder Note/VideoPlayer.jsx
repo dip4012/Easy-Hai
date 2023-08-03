@@ -21,7 +21,7 @@ const VideoPlayer = () => {
 						alt="Thumbnail image"
 						width={1258}
 						height={638}
-						className="absolute z-[-1] w-full h-full"
+						className="shrink-0 absolute z-[-1]"
 					/>
 				}
 				style={{

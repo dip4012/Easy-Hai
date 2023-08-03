@@ -9,7 +9,7 @@ const SocialMediaButtons = () => {
 				height={48}
 				className="max-[767px]:w-[24px]"
 			/>
-			<p className="text-[#35313B] font-Raleway text-3xl font-medium tracking-[-1.68px] max-[767px]:text-xl max-[767px]:tracking-[-0.68px]">
+			<p className="text-[#35313B] font-Raleway text-3xl font-medium tracking-[-1.68px] max-[767px]:text-xl max-[767px]:tracking-[-0.68px] max-[514px]:hidden">
 				Facebook
 			</p>
 		</div>

@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const FeatureCard = ({ title }) => {
 	return (
-		<div className=" w-[280px] min-w-min h-[103px] shrink-0 flex justify-center items-center bg-[#E9E9E9] rounded-[15px] max-[767px]:gap-[24px] max-[785px]:w-full">
+		<div className="w-[280px] h-[103px] flex justify-center items-center bg-[#E9E9E9] rounded-[15px] max-[645px]:w-[120px] max-[645px]:h-[60px]">
 			<Image
 				src={`/assets/images/${title}.png`}
 				width={177}

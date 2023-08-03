@@ -9,7 +9,7 @@ const Featured = () => {
 			</h1>
 
 			{/* feature links */}
-			<div className="w-full max-w-[932px] flex justify-center items-center flex-wrap gap-[46px] mx-auto mt-[55px]">
+			<div className="w-full max-w-[932px] flex justify-center items-center flex-wrap gap-[46px] mx-auto mt-[55px] max-[645px]:gap-[16px]">
 				<FeatureCard title="yourstory-logo" />
 				<FeatureCard title="the-hindu-logo" />
 				<FeatureCard title="the-better-india-logo" />

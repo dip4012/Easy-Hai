@@ -10,13 +10,11 @@ const DesktopCorporateSession = () => {
 			</h1>
 
 			{/* social media placeholders */}
-			<div className="w-full flex justify-center items-center mt-[64px]">
-				<div className="flex justify-start items-center gap-[46px] overflow-x-scroll no-scrollbar">
-					<SocialMediaButtons />
-					<SocialMediaButtons />
-					<SocialMediaButtons />
-					<SocialMediaButtons />
-				</div>
+			<div className="w-full flex justify-center items-center gap-[46px] flex-wrap mt-[64px] max-[767px]:gap-[36px]">
+				<SocialMediaButtons />
+				<SocialMediaButtons />
+				<SocialMediaButtons />
+				<SocialMediaButtons />
 			</div>
 
 			{/* card placeholders */}
