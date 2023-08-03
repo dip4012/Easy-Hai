@@ -4,14 +4,14 @@ import HeaderContent from "./HeaderContent"
 
 const LandingPageHeader = () => {
 	return (
-		<div className="h-[729px] w-full bg-[#8940FF] rounded-b-[50px] px-[105px] py-[43px] relative max-[767px]:px-0 max-[767px]:h-[850px]">
+		<div className="h-[729px] w-full bg-[#8940FF] rounded-b-[30px] px-[105px] py-[43px] relative overflow-hidden max-[767px]:px-0 max-[767px]:h-[729px]">
 			{/* background potrait image */}
 			<Image
 				src="/assets/images/studio-portrait-bearded-man-standing-beige-background-wears-casual-shirt-glasses-smiling-showing-thumbs-up-sign-into-camera 1.png"
 				alt="header background image"
 				width={663}
 				height={612}
-				className="w-[663px] h-[612px] absolute bottom-0 right-[92.19px] z-[1] max-[767px]:bottom-[9px] max-[767px]:right-[50%] max-[767px]:translate-x-[39%] max-[767px]:h-[650px]"
+				className="min-h-[612px] min-w-[663px] absolute bottom-0 right-[92.19px] z-[1] max-[767px]:bottom-[30px] max-[767px]:right-[50%] max-[767px]:translate-x-[39%]"
 			/>
 
 			{/* header floating icon 1 */}

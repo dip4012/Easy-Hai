@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import QualityCard from "./QualityCard"
 
 const Reasoning = () => {
@@ -35,6 +35,47 @@ const Reasoning = () => {
 			color: "purple",
 		},
 	])
+
+	const ref = useRef()
+	let carouselTimer
+
+	useEffect(() => {
+		document.getElementById("reasonList").scrollTo({
+			left: 22.5,
+			behavior: "smooth",
+		})
+		handleResize()
+		window.addEventListener("resize", handleResize)
+		return () => window.removeEventListener("resize", handleResize)
+	}, [])
+
+	const handleResize = () => {
+		clearInterval(carouselTimer)
+		const reasonDiv = document.getElementById("reasonList")
+
+		if (reasonDiv.scrollWidth > reasonDiv.clientWidth) {
+			clearInterval(carouselTimer)
+			carouselTimer = setInterval(() => {
+				const widthPerElement = 243 + 45
+				const totalScrollableOffset =
+					22.5 + 4 * widthPerElement > reasonDiv.scrollWidth - reasonDiv.clientWidth
+						? reasonDiv.scrollWidth - reasonDiv.clientWidth
+						: 22.5 + 4 * widthPerElement
+
+				if (reasonDiv.scrollLeft >= totalScrollableOffset) {
+					reasonDiv.scrollTo({
+						left: 22.5,
+						behavior: "smooth",
+					})
+				} else {
+					reasonDiv.scrollTo({
+						left: reasonDiv.scrollLeft + widthPerElement,
+						behavior: "smooth",
+					})
+				}
+			}, 3000)
+		}
+	}
 	return (
 		<div className="w-full pt-[74px] pb-[93.9px] px-[92.14px] bg-[#262543] relative z-0 max-[767px]:pt-[38px] max-[767px]:pb-[96.56px] max-[767px]:px-[20px]">
 			{/* section header */}
@@ -47,11 +88,19 @@ const Reasoning = () => {
 			</p>
 
 			{/* list points */}
-			<div className="w-full flex justify-center items-center">
-				<div className="mt-[100px] flex gap-[55px] justify-start items-start overflow-x-scroll no-scrollbar max-[767px]:justify-start">
+			<div
+				className="w-full mt-[100px] flex justify-center items-center"
+				ref={ref}
+			>
+				<div
+					className="flex gap-[45px] justify-start items-start overflow-x-scroll no-scrollbar max-[767px]:justify-start"
+					id="reasonList"
+				>
+					<div></div>
 					{listItems.map((item) => (
 						<QualityCard item={item} key={item.title} />
 					))}
+					<div></div>
 				</div>
 			</div>
 		</div>

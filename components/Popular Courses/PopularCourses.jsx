@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import CourseCard from "./CourseCard"
 
 const PopularCourses = () => {
@@ -8,8 +8,6 @@ const PopularCourses = () => {
 		"All Programme",
 		"Category 1",
 		"Category 2",
-		"Category3",
-		"Category 4",
 	])
 
 	const [selectedCategory, setSelectedCategory] = useState("All Programme")
@@ -53,6 +51,57 @@ const PopularCourses = () => {
 		},
 	])
 
+	const [showScrollIndicator, setShowScrollIndicator] = useState(false)
+	const ref = useRef()
+
+	useEffect(() => {
+		document.getElementById("coursesList").scrollTo({
+			left: 12.5,
+			behavior: "smooth",
+		})
+		handleResize()
+		window.addEventListener("resize", handleResize)
+		return () => window.removeEventListener("resize", handleResize)
+	}, [])
+
+	const handleResize = () => {
+		const coursesCount = courses.length
+		// const widthPerElement = Number(window.innerWidth) > 767 ? 296 : 161
+		const widthPerElement = 296
+		if (
+			Number(ref.current.clientWidth) >
+			widthPerElement * coursesCount + 25 * (coursesCount + 1) + 40
+		) {
+			setShowScrollIndicator(false)
+		} else {
+			setShowScrollIndicator(true)
+		}
+	}
+
+	const handleClick = () => {
+		const coursesListDiv = document.getElementById("coursesList")
+		const coursesCount = courses.length
+		// const widthPerElement = (Number(window.innerWidth) > 767 ? 296 : 161) + 25
+		const widthPerElement = 296 + 25
+		const totalScrollableOffset =
+			12.5 + (coursesCount - 1) * widthPerElement >
+			coursesListDiv.scrollWidth - coursesListDiv.clientWidth
+				? coursesListDiv.scrollWidth - coursesListDiv.clientWidth
+				: 12.5 + (coursesCount - 1) * widthPerElement
+
+		if (coursesListDiv.scrollLeft >= totalScrollableOffset) {
+			coursesListDiv.scrollTo({
+				left: 12.5,
+				behavior: "smooth",
+			})
+		} else {
+			coursesListDiv.scrollTo({
+				left: coursesListDiv.scrollLeft + widthPerElement,
+				behavior: "smooth",
+			})
+		}
+	}
+
 	return (
 		<section className="w-full pt-[77.02px] pb-[131px] px-[90.5px] max-[767px]:px-[20px] bg-white relative z-0">
 			{/* section header */}
@@ -80,10 +129,34 @@ const PopularCourses = () => {
 			</div>
 
 			{/* courses list */}
-			<div className="px-[20px] py-[25px] flex justify-center items-center gap-[25px] flex-wrap mt-[61px] max-[767px]:justify-start max-[767px]:flex-nowrap max-[767px]:overflow-x-scroll no-scrollbar">
-				{courses.map((course) => (
-					<CourseCard key={course.title} course={course} />
-				))}
+			<div
+				className="w-full mt-[61px] flex justify-center items-center relative"
+				ref={ref}
+			>
+				<button
+					className={`absolute top-50% right-[10px] rounded-full bg-[#350B63] z-1 p-[10px] animate-bounceHorizontal ${
+						!showScrollIndicator && "hidden"
+					}`}
+					onClick={handleClick}
+				>
+					<Image
+						src="/assets/icons/forward_icon.svg"
+						width={20}
+						height={20}
+						alt="forward icon"
+						className=""
+					/>
+				</button>
+				<div
+					className="px-[20px] py-[25px] flex justify-start items-center gap-[25px] overflow-x-scroll no-scrollbar"
+					id="coursesList"
+				>
+					<div></div>
+					{courses.map((course) => (
+						<CourseCard key={course.title} course={course} />
+					))}
+					<div></div>
+				</div>
 			</div>
 		</section>
 	)
