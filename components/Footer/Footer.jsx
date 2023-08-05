@@ -56,18 +56,18 @@ const Footer = () => {
 				</div>
 
 				{/* newletter box */}
-				<div className="max-w-[430px] min-w-[305px] flex-1 flex flex-col gap-[20px] justify-start items-center max-[767px]:items-start max-[1042px]:max-w-none">
+				<div className="max-w-[430px] min-w-[260px] flex-1 flex flex-col gap-[20px] justify-start items-center max-[767px]:items-start max-[1042px]:max-w-none">
 					<p className="text-white font-Raleway text-sm font-normal">
 						Stay up to date with the latest courses
 					</p>
 
-					<div className="w-full bg-white rounded-[15px] flex justify-center items-center p-[11px]">
+					<div className="w-full bg-white rounded-[15px] flex justify-between items-center p-[11px]">
 						<input
 							type="email"
 							placeholder="Email"
-							className="bg-white w-full rounded-[15px] focus:outline-none placeholder:text-[#8940FF] placeholder:font-Raleway placeholder:text-base placeholder:font-normal"
+							className="bg-white min-w-0 w-[50%] rounded-[15px] focus:outline-none placeholder:text-[#8940FF] placeholder:font-Raleway placeholder:text-base placeholder:font-normal"
 						/>
-						<button className="bg-[#350B63] px-[50px] py-[13px] rounded-[10px] text-white font-Raleway text-base font-normal">
+						<button className="bg-[#350B63] px-[50px] py-[13px] rounded-[10px] text-white font-Raleway text-base font-normal max-[767px]:text-xs max-[767px]:px-[25px]">
 							Send
 						</button>
 					</div>
