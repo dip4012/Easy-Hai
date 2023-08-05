@@ -42,7 +42,6 @@ const LandingPageHeader = () => {
 
 			{/* Header content */}
 			<HeaderContent />
-			{/* <div className=""></div> */}
 		</div>
 	)
 }

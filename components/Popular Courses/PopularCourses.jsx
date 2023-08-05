@@ -51,59 +51,59 @@ const PopularCourses = () => {
 		},
 	])
 
-	const [showScrollIndicator, setShowScrollIndicator] = useState(false)
-	const ref = useRef()
+	// const [showScrollIndicator, setShowScrollIndicator] = useState(false)
+	// const ref = useRef()
 
-	useEffect(() => {
-		document.getElementById("coursesList").scrollTo({
-			left: 12.5,
-			behavior: "smooth",
-		})
-		handleResize()
-		window.addEventListener("resize", handleResize)
-		return () => window.removeEventListener("resize", handleResize)
-	}, [])
+	// useEffect(() => {
+	// 	document.getElementById("coursesList").scrollTo({
+	// 		left: 12.5,
+	// 		behavior: "smooth",
+	// 	})
+	// 	handleResize()
+	// 	window.addEventListener("resize", handleResize)
+	// 	return () => window.removeEventListener("resize", handleResize)
+	// }, [])
 
-	const handleResize = () => {
-		const coursesCount = courses.length
-		// const widthPerElement = Number(window.innerWidth) > 767 ? 296 : 161
-		const widthPerElement = 296
-		if (
-			Number(ref.current.clientWidth) >
-			widthPerElement * coursesCount + 25 * (coursesCount + 1) + 40
-		) {
-			setShowScrollIndicator(false)
-		} else {
-			setShowScrollIndicator(true)
-		}
-	}
+	// const handleResize = () => {
+	// 	const coursesCount = courses.length
+	// 	// const widthPerElement = Number(window.innerWidth) > 767 ? 296 : 161
+	// 	const widthPerElement = 296
+	// 	if (
+	// 		Number(ref.current.clientWidth) >
+	// 		widthPerElement * coursesCount + 25 * (coursesCount + 1) + 40
+	// 	) {
+	// 		setShowScrollIndicator(false)
+	// 	} else {
+	// 		setShowScrollIndicator(true)
+	// 	}
+	// }
 
-	const handleClick = () => {
-		const coursesListDiv = document.getElementById("coursesList")
-		const coursesCount = courses.length
-		// const widthPerElement = (Number(window.innerWidth) > 767 ? 296 : 161) + 25
-		const widthPerElement = 296 + 25
-		const totalScrollableOffset =
-			12.5 + (coursesCount - 1) * widthPerElement >
-			coursesListDiv.scrollWidth - coursesListDiv.clientWidth
-				? coursesListDiv.scrollWidth - coursesListDiv.clientWidth
-				: 12.5 + (coursesCount - 1) * widthPerElement
+	// const handleClick = () => {
+	// 	const coursesListDiv = document.getElementById("coursesList")
+	// 	const coursesCount = courses.length
+	// 	// const widthPerElement = (Number(window.innerWidth) > 767 ? 296 : 161) + 25
+	// 	const widthPerElement = 296 + 25
+	// 	const totalScrollableOffset =
+	// 		12.5 + (coursesCount - 1) * widthPerElement >
+	// 		coursesListDiv.scrollWidth - coursesListDiv.clientWidth
+	// 			? coursesListDiv.scrollWidth - coursesListDiv.clientWidth
+	// 			: 12.5 + (coursesCount - 1) * widthPerElement
 
-		if (coursesListDiv.scrollLeft >= totalScrollableOffset) {
-			coursesListDiv.scrollTo({
-				left: 12.5,
-				behavior: "smooth",
-			})
-		} else {
-			coursesListDiv.scrollTo({
-				left: coursesListDiv.scrollLeft + widthPerElement,
-				behavior: "smooth",
-			})
-		}
-	}
+	// 	if (coursesListDiv.scrollLeft >= totalScrollableOffset) {
+	// 		coursesListDiv.scrollTo({
+	// 			left: 12.5,
+	// 			behavior: "smooth",
+	// 		})
+	// 	} else {
+	// 		coursesListDiv.scrollTo({
+	// 			left: coursesListDiv.scrollLeft + widthPerElement,
+	// 			behavior: "smooth",
+	// 		})
+	// 	}
+	// }
 
 	return (
-		<section className="w-full pt-[77.02px] pb-[131px] px-[90.5px] max-[767px]:px-[20px] bg-white relative z-0">
+		<section className="w-full py-[50px] px-[90.5px] max-[767px]:px-[20px] bg-white relative z-0">
 			{/* section header */}
 			<h1 className="text-[#350B63] font-Raleway text-5xl font-bold leading-[62.4px] tracking-[-2.88px] text-center max-[767px]:text-left max-[767px]:text-2xl max-[767px]:leading-[31.2px] max-[767px]:tracking-[-1.44px]">
 				<span className="section_graphic">Popular Courses</span>
@@ -111,7 +111,7 @@ const PopularCourses = () => {
 
 			{/* category list */}
 			<div className="w-full flex justify-center items-center mt-[46px]">
-				<div className="flex gap-[24px] justify-start items-center overflow-x-scroll no-scrollbar">
+				<div className="flex gap-[24px] justify-start items-center flex-wrap">
 					{categories.map((category) => (
 						<div
 							className={`px-[20px] py-[10px] ${
@@ -129,11 +129,8 @@ const PopularCourses = () => {
 			</div>
 
 			{/* courses list */}
-			<div
-				className="w-full mt-[61px] flex justify-center items-center relative"
-				ref={ref}
-			>
-				<button
+			<div className="w-full mt-[20px] flex justify-center items-center relative">
+				{/* <button
 					className={`absolute top-50% right-[10px] rounded-full bg-[#350B63] z-1 p-[10px] animate-bounceHorizontal ${
 						!showScrollIndicator && "hidden"
 					}`}
@@ -146,16 +143,14 @@ const PopularCourses = () => {
 						alt="forward icon"
 						className=""
 					/>
-				</button>
+				</button> */}
 				<div
-					className="px-[20px] py-[25px] flex justify-start items-center gap-[25px] overflow-x-scroll no-scrollbar"
+					className="py-[25px] flex justify-start items-center gap-[25px] overflow-x-scroll no-scrollbar"
 					id="coursesList"
 				>
-					<div></div>
 					{courses.map((course) => (
 						<CourseCard key={course.title} course={course} />
 					))}
-					<div></div>
 				</div>
 			</div>
 		</section>

@@ -9,13 +9,13 @@ const HeaderContent = () => {
 				</span>
 			</h1>
 
-			<p className="w-[70%] mt-[30.82px] text-[#FFFDF5] font-Raleway text-base font-normal leading-[23px] max-[767px]:hidden">
+			<p className="w-[70%] mt-[30.82px] text-[#FFFDF5] font-Raleway text-base font-normal leading-[23px] max-[767px]:w-full max-[767px]:mt-[15px] max-[767px]:text-xs max-[767px]:font-extralight">
 				Courses made to boost your confidence with our bespoke, user-friendly
 				courses, specifically tailored for adults. Seamlessly integrate technology
 				into your daily life with our fun, practical approach.
 			</p>
 
-			<button className="bg-[#FFD836] px-[30px] py-[20px] rounded-[10px] mt-[24px] text-[#350B63] font-Raleway text-base font-medium tracking-[0.32px] max-[767px]:hidden">
+			<button className="bg-[#FFD836] px-[30px] py-[20px] rounded-[10px] mt-[24px] text-[#350B63] font-Raleway text-base font-medium tracking-[0.32px] max-[767px]:px-[15px] max-[767px]:py-[10px] max-[767px]:mt-[12px] max-[767px]:text-xs max-[767px]:font-light">
 				Explore
 			</button>
 		</div>
