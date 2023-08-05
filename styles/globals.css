@@ -56,7 +56,7 @@ iframe {
 }
 
 .footer_div {
-	@apply absolute z-[-1] top-0 left-[-80%] w-[250%] h-[200%] bg-[#8940FF] rounded-tl-[400%] rounded-tr-[300%];
+	@apply absolute z-[-1] top-0 left-[-80%] w-[250%] h-[200%] bg-[#8940FF] rounded-tl-[400%] rounded-tr-[300%] max-[767px]:rounded-tl-[300%] max-[767px]:rounded-tr-[350%];
 }
 
 .nextSlide {
