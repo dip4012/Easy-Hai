@@ -18,21 +18,6 @@ const Reviews = () => {
 						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
 				},
 				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "user",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
 					sender: "user",
 					text:
 						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
@@ -46,21 +31,6 @@ const Reviews = () => {
 			messages: [
 				{
 					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "user",
 					text:
 						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
 				},
@@ -82,21 +52,6 @@ const Reviews = () => {
 						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
 				},
 				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "user",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
 					sender: "user",
 					text:
 						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
@@ -110,21 +65,6 @@ const Reviews = () => {
 			messages: [
 				{
 					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "user",
 					text:
 						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
 				},
@@ -146,21 +86,6 @@ const Reviews = () => {
 						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
 				},
 				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "user",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
 					sender: "user",
 					text:
 						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
@@ -178,21 +103,6 @@ const Reviews = () => {
 						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
 				},
 				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "owner",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
-					sender: "user",
-					text:
-						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
-				},
-				{
 					sender: "user",
 					text:
 						"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit!",
@@ -206,8 +116,10 @@ const Reviews = () => {
 	useEffect(() => {
 		const scrollDivToElement = () => {
 			const div = document.getElementById("review_card_list")
+			const nofReviews = reviews.length
+			let minWidthPerElement = (div.scrollWidth + 16) / nofReviews - 16
 			div.scrollTo({
-				left: 233 * selectedIndex,
+				left: minWidthPerElement * selectedIndex,
 				behavior: "smooth",
 			})
 		}
@@ -216,16 +128,16 @@ const Reviews = () => {
 	}, [selectedIndex])
 
 	return (
-		<section className="w-full px-[90px] pt-[50px] pb-[80px] bg-white relative z-0 max-[767px]:px-[20px]">
+		<section className="w-full px-[80px] py-[50px] bg-white relative z-0 max-[767px]:px-[20px]">
 			{/* section header */}
-			<h1 className="text-[#350B63] font-Raleway text-5xl font-bold leading-[62.4px] tracking-[-2.88px] text-center max-[767px]:text-left max-[767px]:text-2xl max-[767px]:leading-[31.2px] max-[767px]:tracking-[-1.44px]">
+			<h1 className="text-[#350B63] font-Raleway text-5xl font-bold leading-[62.4px] tracking-[-2.88px] text-center max-[767px]:text-2xl max-[767px]:leading-[31.2px] max-[767px]:tracking-[-1.44px]">
 				<span className="section_graphic">Hear From Our Students</span>
 			</h1>
 
 			{/* reviews user card list */}
 			<div
 				id="review_card_list"
-				className="w-full flex justify-start items-center gap-[16px] overflow-x-scroll no-scrollbar mt-[45px] p-[20px]"
+				className="flex justify-start items-center gap-[16px] overflow-x-scroll no-scrollbar mt-[80px] p-[8px] max-[767px]:mt-[50px]"
 			>
 				{reviews.map((review, index) => (
 					<ReviewUserCard

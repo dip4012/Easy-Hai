@@ -4,7 +4,7 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false })
 
 const VideoPlayer = () => {
 	return (
-		<div className="w-full pt-[70px] rounded-[15px] aspect-video max-[650px]:aspect-square">
+		<div className="w-full pt-[70px] rounded-[15px] aspect-video max-[767px]:aspect-square">
 			<ReactPlayer
 				playing
 				url="https://www.youtube.com/watch?v=vna6mm5iJUc?origin=http://localhost:3000"
@@ -12,18 +12,15 @@ const VideoPlayer = () => {
 				height={"100%"}
 				playIcon={
 					<button className="w-[10%] aspect-square max-w-[80px] max-h-[80px] bg-[#350B63] text-white rounded-full flex justify-center items-center">
-						<Image src="/assets/icons/play_icon.svg" width={32} height={32} />
+						<Image
+							src="/assets/icons/play_icon.svg"
+							width={32}
+							height={32}
+							className="w-[50%]"
+						/>
 					</button>
 				}
-				light={
-					<Image
-						src="/assets/images/video_thumbnail.png"
-						alt="Thumbnail image"
-						width={1258}
-						height={638}
-						className="shrink-0 absolute z-[-1]"
-					/>
-				}
+				light={true}
 				style={{
 					borderRadius: "15px",
 					position: "relative",

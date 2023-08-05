@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Review = ({ review }) => {
 	return (
-		<div className="w-full h-[462px] px-[65px] pt-[55px] pb-[36px] rounded-[15px] bg-[#E8E0D5] mt-[52px] flex flex-col justify-start gap-[21px] overflow-y-scroll no-scrollbar max-[767px]:px-[21px]">
+		<div className="w-full h-[350px] px-[65px] pt-[55px] pb-[36px] rounded-[15px] bg-[#E8E0D5] mt-[52px] flex flex-col justify-start gap-[21px] overflow-y-scroll no-scrollbar max-[767px]:px-[21px]">
 			{review.messages.map((message) => (
 				<div
 					key={message}

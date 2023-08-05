@@ -20,11 +20,11 @@
 }
 
 .header_graphic {
-	@apply relative after:w-[270px] after:h-[20px] after:absolute after:top-[46px] after:left-[75px] after:rotate-[2.663deg] after:bg-[#B486FF] after:z-[-1] max-[767px]:after:hidden;
+	@apply relative after:w-[270px] after:h-[20px] after:absolute after:top-[46px] after:left-[75px] after:rotate-[2.663deg] after:bg-[#B486FF] after:z-[-1] after:max-[767px]:hidden;
 }
 
 .section_graphic {
-	@apply relative after:w-min after:h-min after:absolute after:top-[50%] after:right-[-50px] after:content-[url("/assets/icons/vector_underline_1.png")] after:bg-no-repeat after:z-[-1] after:max-[767px]:content-[url("/assets/icons/vector_underline_2.png")] after:max-[767px]:right-[-25px];
+	@apply relative after:w-min after:h-min after:absolute after:top-[50%] after:left-[50%] after:translate-x-[-50%] after:content-[url("/assets/icons/vector_underline_1.png")] after:bg-no-repeat after:z-[-1] after:max-[767px]:content-[url("/assets/icons/vector_underline_2.png")] after:max-[767px]:right-[-25px];
 }
 
 .green {
@@ -49,6 +49,10 @@
 
 iframe {
 	@apply rounded-[15px];
+}
+
+.react-player__preview {
+	@apply bg-[url("/assets/images/video_thumbnail.png")] rounded-[15px];
 }
 
 .footer_div {
