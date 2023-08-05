@@ -36,72 +36,53 @@ const Reasoning = () => {
 		},
 	])
 
-	const ref = useRef()
-	let carouselTimer
+	const [index, setIndex] = useState(0)
 
 	useEffect(() => {
-		document.getElementById("reasonList").scrollTo({
-			left: 22.5,
-			behavior: "smooth",
-		})
-		handleResize()
-		window.addEventListener("resize", handleResize)
-		return () => window.removeEventListener("resize", handleResize)
-	}, [])
+		const timer = setInterval(() => {
+			setIndex(index + 1)
+		}, 4000)
 
-	const handleResize = () => {
-		clearInterval(carouselTimer)
-		const reasonDiv = document.getElementById("reasonList")
+		return () => clearInterval(timer)
+	}, [index])
 
-		if (reasonDiv.scrollWidth > reasonDiv.clientWidth) {
-			clearInterval(carouselTimer)
-			carouselTimer = setInterval(() => {
-				const widthPerElement = 243 + 45
-				const totalScrollableOffset =
-					22.5 + 4 * widthPerElement > reasonDiv.scrollWidth - reasonDiv.clientWidth
-						? reasonDiv.scrollWidth - reasonDiv.clientWidth
-						: 22.5 + 4 * widthPerElement
+	useEffect(() => {
+		const lastIndex = listItems.length - 1
+		if (index < 0) setIndex(lastIndex)
+		if (index > lastIndex) setIndex(0)
+	}, [index, listItems])
 
-				if (reasonDiv.scrollLeft >= totalScrollableOffset) {
-					reasonDiv.scrollTo({
-						left: 22.5,
-						behavior: "smooth",
-					})
-				} else {
-					reasonDiv.scrollTo({
-						left: reasonDiv.scrollLeft + widthPerElement,
-						behavior: "smooth",
-					})
-				}
-			}, 3000)
-		}
-	}
 	return (
-		<div className="w-full pt-[74px] pb-[93.9px] px-[92.14px] bg-[#262543] relative z-0 max-[767px]:pt-[38px] max-[767px]:pb-[96.56px] max-[767px]:px-[20px]">
+		<div className="w-full px-[80px] py-[50px] bg-[#262543] relative z-0 max-[767px]:px-[20px]">
 			{/* section header */}
-			<h1 className="text-white w-full font-Raleway text-5xl font-bold tracking-[0.768px] flex flex-wrap justify-center items-center gap-[4px] max-[767px]:justify-start max-[767px]:text-2xl max-[767px]:font-medium">
+			<h1 className="text-white w-full font-Raleway text-5xl font-bold tracking-[0.768px] text-center gap-[4px] max-[767px]:justify-start max-[767px]:text-2xl max-[767px]:font-medium">
 				<span className="section_graphic">Why Learn With Us?</span>
 			</h1>
 
-			<p className="w-full text-center mt-[54px] text-white font-Raleway text-sm font-normal tracing-[0.15px] max-[767px]:text-left">
+			<p className="w-full text-center mt-[50px] text-white font-Raleway text-sm font-normal tracing-[0.15px]">
 				Veritatis voluptas sit eos nihil velit debitis. Illum dolor qu
 			</p>
 
-			{/* list points */}
-			<div
-				className="w-full mt-[100px] flex justify-center items-center"
-				ref={ref}
-			>
-				<div
-					className="flex gap-[45px] justify-start items-start overflow-x-scroll no-scrollbar max-[767px]:justify-start"
-					id="reasonList"
-				>
-					<div></div>
+			{/* desktop list points */}
+			<div className="w-full mt-[50px] flex justify-center items-center max-[767px]:hidden">
+				<div className="flex gap-[45px] justify-start items-start overflow-x-scroll no-scrollbar">
 					{listItems.map((item) => (
-						<QualityCard item={item} key={item.title} />
+						<QualityCard position={"activeSlide"} item={item} key={item.title} />
 					))}
-					<div></div>
 				</div>
+			</div>
+
+			{/* mobile list points */}
+			<div className="w-full h-[170px] mt-[50px] flex justify-center items-start min-[768px]:hidden">
+				{listItems.map((item, i, arr) => {
+					let position = "nextSlide"
+
+					if (i === index) position = "activeSlide"
+					if (i === index - 1 || (index === 0 && i === arr.length - 1))
+						position = "lastSlide"
+
+					return <QualityCard position={position} item={item} key={item.title} />
+				})}
 			</div>
 		</div>
 	)
