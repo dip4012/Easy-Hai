@@ -1,4 +1,4 @@
-import CoporateSessionCards from "./CoporateSessionCards"
+import CoporateSessionCard from "./CoporateSessionCard"
 import SocialMediaButtons from "./SocialMediaButtons"
 
 const DesktopCorporateSession = () => {
@@ -18,7 +18,7 @@ const DesktopCorporateSession = () => {
 			</div>
 
 			{/* card placeholders */}
-			<CoporateSessionCards />
+			<CoporateSessionCard />
 		</section>
 	)
 }

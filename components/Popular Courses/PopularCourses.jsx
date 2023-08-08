@@ -21,6 +21,7 @@ const PopularCourses = () => {
 			endTime: "8:00pm",
 			isAvailable: false,
 			price: 380,
+			image: "instagram",
 		},
 		{
 			title: "Canva Champ Course",
@@ -30,6 +31,7 @@ const PopularCourses = () => {
 			endTime: "1:00pm",
 			isAvailable: true,
 			price: 380,
+			image: "canva",
 		},
 		{
 			title: "LinkedIn Mastery Course",
@@ -39,6 +41,7 @@ const PopularCourses = () => {
 			endTime: "1:00pm",
 			isAvailable: true,
 			price: 380,
+			image: "linkedin",
 		},
 		{
 			title: "Google Sheets Course",
@@ -48,6 +51,7 @@ const PopularCourses = () => {
 			endTime: "1:00pm",
 			isAvailable: true,
 			price: 380,
+			image: "google_sheets",
 		},
 	])
 
@@ -103,7 +107,7 @@ const PopularCourses = () => {
 	// }
 
 	return (
-		<section className="w-full py-[50px] px-[90.5px] max-[767px]:px-[20px] bg-white relative z-0">
+		<section className="w-full py-[50px] px-[74px] max-[767px]:px-[4px] bg-white relative z-0">
 			{/* section header */}
 			<h1 className="text-[#350B63] font-Raleway text-5xl font-bold leading-[62.4px] tracking-[-2.88px] text-center max-[767px]:text-2xl max-[767px]:leading-[31.2px] max-[767px]:tracking-[-1.44px]">
 				<span className="section_graphic">Popular Courses</span>
@@ -145,7 +149,7 @@ const PopularCourses = () => {
 					/>
 				</button> */}
 				<div
-					className="py-[25px] flex justify-start items-center gap-[25px] overflow-x-scroll no-scrollbar"
+					className="px-[16px] py-[25px] flex justify-start items-center gap-[25px] overflow-x-scroll no-scrollbar"
 					id="coursesList"
 				>
 					{courses.map((course) => (

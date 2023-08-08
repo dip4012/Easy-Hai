@@ -12,7 +12,7 @@ const QualityCard = ({ item, position }) => {
 				<h1 className="mt-[34px] text-white font-Raleway text-2xl font-semibold tracing-[0.352px] max-[767px]:text-lg max-[767px]:font-medium max-[767px]:mt-[17px]">
 					{item.title}
 				</h1>
-				<p className="text-white font-Raleway text-base font-medium max-[767px]:text-xs max-[767px]:font-extralight">
+				<p className="text-white font-Raleway text-base font-light max-[767px]:text-xs max-[767px]:font-extralight">
 					{item.text}
 				</p>
 			</div>

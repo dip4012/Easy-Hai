@@ -9,13 +9,11 @@ const Featured = () => {
 			</h1>
 
 			{/* feature links */}
-			<div className="w-full flex justify-evenly items-center flex-wrap gap-[46px] mt-[80px] max-[645px]:gap-[23px] max-[767px]:mt-[50px]">
-				<FeatureCard title="yourstory-logo" />
-				<FeatureCard title="the-hindu-logo" />
-				<FeatureCard title="the-better-india-logo" />
-				<FeatureCard title="yourstory-logo" />
-				<FeatureCard title="the-hindu-logo" />
-				<FeatureCard title="the-better-india-logo" />
+			<div className="w-full flex justify-evenly items-center flex-wrap gap-[40px] mt-[80px] max-[645px]:gap-[20px] max-[767px]:mt-[50px]">
+				<FeatureCard title="yourstory_logo" />
+				<FeatureCard title="the_hindu_logo" />
+				<FeatureCard title="hindustan_times_logo" />
+				<FeatureCard title="the_better_india_logo" />
 			</div>
 		</section>
 	)

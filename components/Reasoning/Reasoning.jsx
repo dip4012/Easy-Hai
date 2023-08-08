@@ -7,13 +7,13 @@ const Reasoning = () => {
 		{
 			title: "Personalized Learning",
 			text:
-				"Interactive discussions that stimulate your mind, fearlessly ask tech questions",
+				"Interactive discussions that stimulate your mind, fearlessly ask tech questions.",
 			color: "green",
 		},
 		{
 			title: "Expert Guidance",
 			text:
-				"Our courses are conducted by Shreya herself who specialize in teaching digital skills.",
+				"Our courses are conducted by Shreya herself who specialize in demystifying tech concepts to make it practical and enjoyable for adults and seniors. teaching digital skills.",
 			color: "orange",
 		},
 		{
@@ -25,7 +25,7 @@ const Reasoning = () => {
 		{
 			title: "Convenient Virtual Learning",
 			text:
-				"Our Zoom classes allow you to learn from the comfort of your own home. ",
+				"Our Zoom classes allow you to learn from the comfort of your own home.",
 			color: "violet",
 		},
 		{
@@ -59,12 +59,12 @@ const Reasoning = () => {
 				<span className="section_graphic">Why Learn With Us?</span>
 			</h1>
 
-			<p className="w-full text-center mt-[50px] text-white font-Raleway text-sm font-normal tracing-[0.15px]">
+			{/* <p className="w-full text-center mt-[50px] text-white font-Raleway text-sm font-normal tracing-[0.15px]">
 				Veritatis voluptas sit eos nihil velit debitis. Illum dolor qu
-			</p>
+			</p> */}
 
 			{/* desktop list points */}
-			<div className="w-full mt-[50px] flex justify-center items-center max-[767px]:hidden">
+			<div className="w-full mt-[80px] flex justify-center items-center max-[767px]:hidden max-[767px]:mt-[50px]">
 				<div className="flex gap-[45px] justify-start items-start overflow-x-scroll no-scrollbar">
 					{listItems.map((item) => (
 						<QualityCard position={"activeSlide"} item={item} key={item.title} />

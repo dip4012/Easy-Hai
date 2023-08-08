@@ -1,6 +1,6 @@
 "use client"
 
-import dynamic from "next/dynamic"
+// import dynamic from "next/dynamic"
 import DesktopCorporateSession from "@/components/Corporate Sessions/DesktopCorporateSession"
 import Featured from "@/components/Featured Section/Featured"
 import Footer from "@/components/Footer/Footer"

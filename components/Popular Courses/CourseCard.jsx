@@ -6,7 +6,7 @@ const CourseCard = ({ course }) => {
 		<div className="w-[296px] rounded-[14px] bg-white shadow-[0_4px_25px_0_rgba(0,0,0,0.10)] flex-shrink-0 max-[767px]:w-[161px]">
 			{/* course thumbnail image */}
 			<Image
-				src="/assets/images/dummy_course_image.png"
+				src={`/assets/images/${course.image}.JPG`}
 				width={334}
 				height={179}
 				style={{
