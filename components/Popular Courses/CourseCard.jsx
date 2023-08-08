@@ -34,7 +34,7 @@ const CourseCard = ({ course }) => {
 					</p>
 				</div>
 
-				<div className="shrink-0 w-full">
+				<div className="shrink-0 w-full flex justify-between items-center">
 					{/* platform */}
 					<p className="text-[#777795] font-Raleway text-xs font-semibold max-[767px]:text-[7px] max-[767px]:font-semibold">
 						Platform:
@@ -48,26 +48,27 @@ const CourseCard = ({ course }) => {
 						</Link>
 					</p>
 
+					{course.isAvailable ? (
+						<button className="px-[20px] py-[10px] bg-[#350B63] text-white font-Raleway text-xs font-medium rounded-[5px] max-[767px]:px-[13.7px] max-[767px]:py-[6.86px] max-[767px]:text-[8px] max-[767px]:font-medium">
+							Enroll Now
+						</button>
+					) : (
+						<button className="px-[20px] py-[10px] bg-[#3B770B] text-white font-Raleway text-xs font-medium rounded-[5px] max-[767px]:px-[13.7px] max-[767px]:py-[6.86px] max-[767px]:text-[8px] max-[767px]:font-medium">
+							Coming Soon
+						</button>
+					)}
+
 					{/* course price and course CTA */}
-					<div className="w-full flex justify-between items-center">
-						<div className="flex justify-center items-center gap-[8px]">
+					{/* <div className="w-full flex justify-between items-center mt-[10px] max-[767px]:mt-[5px]"> */}
+					{/* <div className="flex justify-center items-center gap-[8px]">
 							<p className="text-[#FD661F] font-Inter text-base font-bold max-[767px]:text-[9px] max-[767px]:font-bold">
 								&#8377; {course.price}
 							</p>
 							<p className="text-[#230F0F] font-Inter text-sm font-normal line-through max-[767px]:text-[8px] max-[767px]:font-normal">
 								&#8377; {course.price * 1.2}
 							</p>
-						</div>
-						{course.isAvailable ? (
-							<button className="px-[20px] py-[10px] bg-[#350B63] text-white font-Raleway text-xs font-medium rounded-[5px] max-[767px]:px-[13.7px] max-[767px]:py-[6.86px] max-[767px]:text-[8px] max-[767px]:font-medium">
-								Enroll Now
-							</button>
-						) : (
-							<button className="px-[20px] py-[10px] bg-[#3B770B] text-white font-Raleway text-xs font-medium rounded-[5px] max-[767px]:px-[13.7px] max-[767px]:py-[6.86px] max-[767px]:text-[8px] max-[767px]:font-medium">
-								Coming Soon
-							</button>
-						)}
-					</div>
+						</div> */}
+					{/* </div> */}
 				</div>
 			</div>
 		</div>

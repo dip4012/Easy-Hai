@@ -1,6 +1,30 @@
+"use client"
+
 import Image from "next/image"
+import { useEffect, useState } from "react"
+
+// import corporate_image_1 from "../../public/assets/images/corporate_image_1.JPG"
+// import corporate_image_2 from "../../public/assets/images/corporate_image_2.JPG"
+// import corporate_image_3 from "../../public/assets/images/corporate_image_3.JPG"
 
 const CoporateSessionCard = () => {
+	const images = ["corporate_image_1", "corporate_image_2", "corporate_image_3"]
+	const [index, setIndex] = useState(0)
+
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setIndex((index) => index + 1)
+		}, 4000)
+
+		return () => clearInterval(timer)
+	}, [index])
+
+	useEffect(() => {
+		const lastIndex = images.length - 1
+		if (index > lastIndex) setIndex(0)
+		if (index < 0) setIndex(lastIndex)
+	}, [index, images])
+
 	return (
 		// {/* mobile view */}
 		// {/* <div className="w-full max-w-[400px] mt-[50px] mx-auto bg-gray-500 rounded-[14px] shadow-[0_4px_25px_0_rgba(0,0,0,0.10)] max-[767px]:mt-[30px] min-[768px]:hidden">
@@ -17,8 +41,27 @@ const CoporateSessionCard = () => {
 		// </div> */}
 
 		// {/* desktop view */}
-		<div className="w-full h-[500px] mt-[50px] rounded-[14px] bg-gray-500 flex justify-start items-center flex-wrap max-[800px]:h-auto">
-			<div className="shrink-0 w-[50%] h-[500px] rounded-[14px] bg-[linear-gradient(to_right,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.0)_60%,rgba(107,114,128,1.0)_100%),url('/assets/images/corporate_image.JPG')] bg-center bg-cover max-[800px]:w-full max-[800px]:h-[300px] max-[800px]:bg-top max-[800px]:bg-[linear-gradient(to_bottom,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.0)_60%,rgba(107,114,128,1.0)_100%),url('/assets/images/corporate_image.JPG')]"></div>
+		<div className="w-full h-[500px] mt-[50px] bg-gray-500 rounded-[14px] flex justify-start items-center flex-wrap max-[800px]:h-auto">
+			<div className="relative shrink-0 w-[50%] h-[500px] rounded-[14px] bg-center bg-cover max-[800px]:w-full max-[800px]:h-[300px] max-[800px]:bg-top">
+				{images.map((item, i, arr) => {
+					let position = "nextSlide"
+
+					if (i === index) position = "activeSlide"
+					if (i === index - 1 || (index === 0 && i === arr.length - 1))
+						position = "lastSlide"
+
+					return (
+						<Image
+							src={`/assets/images/${item}.JPG`}
+							fill
+							className={`${
+								position === "activeSlide" ? "block" : "hidden"
+							} overflow-hidden object-cover object-center rounded-[14px]`}
+						/>
+					)
+				})}
+				<div className="absolute z-50 top-0 bottom-0 w-full h-full bg-gradient-to-r from-transparent from-0% via-90% via-gray-500 to-gray-500 max-[800px]:bg-gradient-to-b"></div>
+			</div>
 			<div className="flex-1 h-full p-[80px] text-[#E9E9E9] text-3xl font-Raleway max-[767px]:text-sm max-[767px]:p-[40px]">
 				<Image
 					src="/assets/icons/Quotes.svg"
