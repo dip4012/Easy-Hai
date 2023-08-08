@@ -20,12 +20,18 @@ const LandingPageHeader = () => {
 				width={149}
 				height={149}
 				className="absolute bottom-[297px] right-[91px] max-[767px]:hidden z-[1]"
+				alt="arbitrary icon"
 			/>
 
 			{/* assisted student floating box */}
 			<div className="flex gap-[32px] items-center px-[28px] py-[15px] w-[300px] h-[100px] rounded-[20px] backdrop-blur-[100px] bg-white/50 absolute right-[420px] bottom-[185px] max-[767px]:hidden z-[2]">
 				<div className="w-[50px] h-[50px] rounded-[8px] bg-[#350B63] flex justify-center items-center">
-					<Image src="/assets/images/header icon 2.png" width={27.5} height={27.5} />
+					<Image
+						src="/assets/images/header icon 2.png"
+						width={27.5}
+						height={27.5}
+						alt="header icon"
+					/>
 				</div>
 				<div>
 					<h1 className="text-[#595959] font-Nunito text-2xl font-bold tracking-[0.48px]">

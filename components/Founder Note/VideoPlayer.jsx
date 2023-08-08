@@ -17,6 +17,7 @@ const VideoPlayer = () => {
 							width={32}
 							height={32}
 							className="w-[50%]"
+							alt="play button"
 						/>
 					</button>
 				}

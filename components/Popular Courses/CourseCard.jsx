@@ -14,6 +14,7 @@ const CourseCard = ({ course }) => {
 					height: "50%",
 				}}
 				className="rounded-t-[14px]"
+				alt={course.title}
 			/>
 			{/* couse details */}
 			<div className="w-full px-[16px] py-[18px] flex flex-col justify-start items-start gap-[30px] max-[767px]:px-[8.69px] max-[767px]:py-[9px] max-[767px]:gap-[15px]">
@@ -44,6 +45,7 @@ const CourseCard = ({ course }) => {
 								width={30}
 								height={8}
 								className="max-[767px]:w-[16.288px] max-[767px]:h-[4.344px]"
+								alt="zoom logo"
 							/>
 						</Link>
 					</p>

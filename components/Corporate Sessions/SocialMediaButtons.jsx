@@ -8,6 +8,7 @@ const SocialMediaButtons = () => {
 				width={160}
 				height={40}
 				className="max-[767px]:w-[120px]"
+				alt="sponsored logo"
 			/>
 			{/* <p className="text-[#35313B] font-Raleway text-3xl font-medium tracking-[-1.68px] max-[767px]:text-xl max-[767px]:tracking-[-0.68px] max-[514px]:hidden">
 				Facebook

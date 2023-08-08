@@ -8,7 +8,11 @@ import { useEffect, useState } from "react"
 // import corporate_image_3 from "../../public/assets/images/corporate_image_3.JPG"
 
 const CoporateSessionCard = () => {
-	const images = ["corporate_image_1", "corporate_image_2", "corporate_image_3"]
+	const [images] = useState([
+		"corporate_image_1",
+		"corporate_image_2",
+		"corporate_image_3",
+	])
 	const [index, setIndex] = useState(0)
 
 	useEffect(() => {
@@ -52,11 +56,13 @@ const CoporateSessionCard = () => {
 
 					return (
 						<Image
+							key={item}
 							src={`/assets/images/${item}.JPG`}
 							fill
 							className={`${
 								position === "activeSlide" ? "block" : "hidden"
 							} overflow-hidden object-cover object-center rounded-[14px]`}
+							alt={item}
 						/>
 					)
 				})}

@@ -125,7 +125,7 @@ const Reviews = () => {
 		}
 
 		scrollDivToElement()
-	}, [selectedIndex])
+	}, [selectedIndex, reviews])
 
 	return (
 		<section className="w-full px-[80px] py-[50px] bg-white relative z-0 max-[767px]:px-[20px]">
