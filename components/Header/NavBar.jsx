@@ -65,7 +65,7 @@ const NavBar = () => {
 
 					{/* mobile menu */}
 					{isOpen && (
-						<div className="absolute top-full z-50 right-0 w-full bg-white/50 backdrop-blur-2xl p-[20px] rounded-[15px] flex flex-col justify-start items-start gap-[10px]">
+						<div className="absolute top-full z-50 right-0 w-full bg-white/50 backdrop-blur-md p-[20px] rounded-[15px] flex flex-col justify-start items-start gap-[10px]">
 							<Link
 								href="#"
 								className="text-white font-Raleway text-sm font-medium tracking-[0.36px] cursor-pointer hover:text-[#8940FF] active:text-[#8940FF]"

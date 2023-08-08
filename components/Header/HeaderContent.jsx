@@ -1,7 +1,7 @@
 import styles from "@/styles/globals.css"
 const HeaderContent = () => {
 	return (
-		<div className="absolute z-[3] w-[53%] pt-[62.74px] max-[767px]:w-full max-[767px]:px-[20px] max-[767px]:pb-[71.04px] max-[767px]:pt-[53.12px] max-[767px]:bottom-0 max-[767px]:rounded-b-[25px] max-[767px]:bg-gradient-to-b max-[767px]:from-transparent max-[767px]:via-[#8B20FF] max-[767px]:via-70% max-[767px]:to-[#6D1CC5] max-[767px]:to-100% max-[767px]:backdrop-blur-[1px]">
+		<div className="absolute z-[3] w-[63%] pt-[62.74px] max-[767px]:w-full max-[767px]:px-[20px] max-[767px]:pb-[71.04px] max-[767px]:pt-[53.12px] max-[767px]:bottom-0 max-[767px]:rounded-b-[25px] max-[767px]:bg-gradient-to-b max-[767px]:from-transparent max-[767px]:via-[#8B20FF] max-[767px]:via-70% max-[767px]:to-[#6D1CC5] max-[767px]:to-100% max-[767px]:backdrop-blur-[1px]">
 			<h1 className="w-full text-white font-Raleway text-[64px] font-bold leading-[75px] max-[767px]:text-[30px] max-[767px]:leading-[40px]">
 				Courses Designed To Help Older Adults Get Digitally{" "}
 				<span className="relative">
