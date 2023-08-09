@@ -114,7 +114,7 @@ const PopularCourses = () => {
 			</h1>
 
 			{/* category list */}
-			<div className="w-full flex justify-center items-center mt-[80px] max-[767px]:mt-[50px]">
+			<div className="w-full px-[16px] flex justify-center items-center mt-[80px] max-[767px]:mt-[50px]">
 				<div className="flex gap-[24px] justify-start items-center flex-wrap max-[767px]:gap-[12px]">
 					{categories.map((category) => (
 						<div
@@ -122,7 +122,7 @@ const PopularCourses = () => {
 								selectedCategory === category
 									? "bg-[#350B63] text-white border-none"
 									: "bg-white text-[#818C96] border border-solid border-[#C4C4C4]"
-							} rounded-[5px] whitespace-nowrap cursor-pointer text-xs font-medium font-Raleway max-[767px]:text-[8px] max-[767px]:font-light max-[767px]:px-[10px] max-[767px]:py-[5px]`}
+							} rounded-[5px] whitespace-nowrap cursor-pointer text-xs font-medium font-Raleway max-[767px]:text-[12px] max-[767px]:font-light max-[767px]:px-[8px] max-[767px]:py-[8px]`}
 							key={category}
 							onClick={() => setSelectedCategory(category)}
 						>

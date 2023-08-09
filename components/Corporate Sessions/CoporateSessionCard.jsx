@@ -66,7 +66,7 @@ const CoporateSessionCard = () => {
 						/>
 					)
 				})}
-				<div className="absolute z-50 top-0 bottom-0 w-full h-full bg-gradient-to-r from-transparent from-0% via-90% via-gray-500 to-gray-500 max-[800px]:bg-gradient-to-b"></div>
+				<div className="absolute z-50 top-0 bottom-0 w-full h-full bg-gradient-to-r from-transparent from-0% via-94% via-transparent to-gray-500 max-[800px]:bg-gradient-to-b"></div>
 			</div>
 			<div className="flex-1 h-full p-[80px] text-[#E9E9E9] text-3xl font-Raleway max-[767px]:text-sm max-[767px]:p-[40px]">
 				<Image
