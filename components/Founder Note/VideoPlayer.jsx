@@ -4,7 +4,7 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false })
 
 const VideoPlayer = () => {
 	return (
-		<div className="w-full pt-[70px] rounded-[15px] aspect-video max-[767px]:aspect-square">
+		<div className="w-[80%] mx-auto pt-[70px] rounded-[15px] aspect-video max-[400px]:aspect-square max-[767px]:w-full">
 			<ReactPlayer
 				playing
 				url="https://www.youtube.com/watch?v=vna6mm5iJUc?origin=http://localhost:3000"

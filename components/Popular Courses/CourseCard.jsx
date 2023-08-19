@@ -17,7 +17,7 @@ const CourseCard = ({ course }) => {
 				alt={course.title}
 			/>
 			{/* couse details */}
-			<div className="w-full px-[16px] py-[18px] flex flex-col justify-start items-start gap-[30px]">
+			<div className="w-full h-1/2 px-[16px] py-[18px] flex flex-col justify-between items-start gap-[30px]">
 				<div className="shrink-0 w-full">
 					{/* course timings */}
 					<p className="text-[#3A3A48] font-Raleway text-xs font-semibold">
@@ -55,9 +55,9 @@ const CourseCard = ({ course }) => {
 							Enroll Now
 						</button>
 					) : (
-						<button className="px-[20px] py-[10px] bg-[#3B770B] text-white font-Raleway text-xs font-medium rounded-[5px]">
+						<div className="px-[20px] py-[10px] bg-white ring-[#3B770B] ring-2 animate-pulse text-[#3B770B] font-Raleway text-xs font-semibold rounded-[5px]">
 							Coming Soon
-						</button>
+						</div>
 					)}
 
 					{/* course price and course CTA */}

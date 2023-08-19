@@ -1,6 +1,16 @@
 "use client"
 import { useEffect, useRef, useState } from "react"
 import QualityCard from "./QualityCard"
+import {
+	BookOpen,
+	GraduationCap,
+	MoveLeft,
+	MoveRight,
+	PersonStanding,
+	Tablet,
+	User2,
+} from "lucide-react"
+import Image from "next/image"
 
 const Reasoning = () => {
 	const [listItems] = useState([
@@ -9,30 +19,35 @@ const Reasoning = () => {
 			text:
 				"Interactive discussions that stimulate your mind, fearlessly ask tech questions.",
 			color: "green",
+			icon: <User2 className="stroke-white stroke-2" />,
 		},
 		{
 			title: "Expert Guidance",
 			text:
 				"Our courses are conducted by Shreya herself who specialize in demystifying tech concepts to make it practical and enjoyable for adults and seniors. teaching digital skills.",
 			color: "orange",
+			icon: <GraduationCap className="stroke-white stroke-2" />,
 		},
 		{
 			title: "Practical Approach",
 			text:
 				"Learn with Shreya by solving real-life problems and gain access to learning sheets, playbooks, and assignments.",
 			color: "blue",
+			icon: <BookOpen className="stroke-white stroke-2" />,
 		},
 		{
 			title: "Convenient Virtual Learning",
 			text:
 				"Our Zoom classes allow you to learn from the comfort of your own home.",
 			color: "violet",
+			icon: <Tablet className="stroke-white stroke-2" />,
 		},
 		{
 			title: "Community",
 			text:
 				"Make tech buddies by joining the curated community of other learners and mentors.",
 			color: "purple",
+			icon: <PersonStanding className="stroke-white stroke-2" />,
 		},
 	])
 
@@ -65,7 +80,7 @@ const Reasoning = () => {
 
 			{/* desktop list points */}
 			<div className="w-full mt-[80px] flex justify-center items-center max-[767px]:hidden max-[767px]:mt-[50px]">
-				<div className="flex gap-[45px] justify-start items-start overflow-x-scroll no-scrollbar">
+				<div className="w-full flex gap-[45px] justify-center items-start flex-wrap no-scrollbar">
 					{listItems.map((item) => (
 						<QualityCard position={"activeSlide"} item={item} key={item.title} />
 					))}
@@ -73,7 +88,7 @@ const Reasoning = () => {
 			</div>
 
 			{/* mobile list points */}
-			<div className="w-full h-[170px] mt-[50px] flex justify-center items-start min-[768px]:hidden">
+			<div className="w-full h-[200px] mt-[50px] flex justify-center items-start min-[768px]:hidden">
 				{listItems.map((item, i, arr) => {
 					let position = "nextSlide"
 
@@ -83,6 +98,14 @@ const Reasoning = () => {
 
 					return <QualityCard position={position} item={item} key={item.title} />
 				})}
+			</div>
+			<div className="flex justify-center items-center gap-2 min-[768px]:hidden">
+				<button className="" onClick={() => setIndex((prev) => prev - 1)}>
+					<MoveLeft className="w-[30px] stroke-[#FD661F] stroke-1" />
+				</button>
+				<button className="" onClick={() => setIndex((prev) => prev + 1)}>
+					<MoveRight className="w-[30px] stroke-[#FD661F] stroke-1" />
+				</button>
 			</div>
 		</div>
 	)

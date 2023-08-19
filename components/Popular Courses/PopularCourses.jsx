@@ -5,12 +5,12 @@ import CourseCard from "./CourseCard"
 
 const PopularCourses = () => {
 	const [categories, setCategories] = useState([
-		"All Programme",
-		"Category 1",
-		"Category 2",
+		"All Courses",
+		"Workshops",
+		"Masterclasses",
 	])
 
-	const [selectedCategory, setSelectedCategory] = useState("All Programme")
+	const [selectedCategory, setSelectedCategory] = useState("All Courses")
 
 	const [courses, setCourses] = useState([
 		{
@@ -107,7 +107,10 @@ const PopularCourses = () => {
 	// }
 
 	return (
-		<section className="w-full py-[50px] px-[74px] max-[767px]:px-[4px] bg-white relative z-0">
+		<section
+			className="w-full py-[50px] px-[74px] max-[767px]:px-[4px] bg-white relative z-0"
+			id="popular_courses"
+		>
 			{/* section header */}
 			<h1 className="text-[#350B63] font-Raleway text-5xl font-bold leading-[62.4px] tracking-[-2.88px] text-center max-[767px]:text-2xl max-[767px]:leading-[31.2px] max-[767px]:tracking-[-1.44px]">
 				<span className="section_graphic">Popular Courses</span>
@@ -149,7 +152,7 @@ const PopularCourses = () => {
 					/>
 				</button> */}
 				<div
-					className="px-[16px] py-[25px] flex justify-start items-center gap-[25px] overflow-x-scroll no-scrollbar"
+					className="px-[16px] py-[25px] flex justify-start items-stretch gap-[25px] overflow-x-scroll no-scrollbar"
 					id="coursesList"
 				>
 					{courses.map((course) => (

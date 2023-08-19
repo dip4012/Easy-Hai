@@ -20,7 +20,7 @@
 }
 
 .header_graphic {
-	@apply relative after:w-[270px] after:h-[20px] after:absolute after:top-[46px] after:left-[75px] after:rotate-[2.663deg] after:bg-[#B486FF] after:z-[-1] after:max-[767px]:hidden;
+	@apply relative after:w-[270px] after:h-[20px] after:absolute after:top-[46px] after:left-[75px] after:rotate-[2.663deg] after:bg-[#B486FF] after:z-[-1] after:max-[1420px]:hidden;
 }
 
 .section_graphic {

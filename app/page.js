@@ -22,7 +22,7 @@ import Reviews from "@/components/Reviews Section/Reviews"
 
 export default function Home() {
 	return (
-		<main className="min-h-screen w-full scroll-smooth">
+		<main className="min-h-screen w-full">
 			{/* header banner section */}
 			<LandingPageHeader />
 
