@@ -56,7 +56,7 @@ const LandingPageHeader = () => {
 					width={50}
 					height={50}
 					alt="scroll down button"
-					className="absolute z-50 bottom-[20px] left-[50%] translate-x-[-50%] animate-bounce max-[767px]:w-[30px] max-[767px]:h-[30px]"
+					className="absolute z-50 bottom-[20px] left-0 right-0 mx-auto animate-bounce max-[767px]:w-[30px] max-[767px]:h-[30px]"
 				/>
 			</Link>
 		</div>
