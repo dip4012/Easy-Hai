@@ -22,6 +22,7 @@ const PopularCourses = () => {
 			isAvailable: false,
 			price: 380,
 			image: "instagram",
+			category: "Masterclasses",
 		},
 		{
 			title: "Canva Champ Course",
@@ -32,6 +33,7 @@ const PopularCourses = () => {
 			isAvailable: true,
 			price: 380,
 			image: "canva",
+			category: "Masterclasses",
 		},
 		{
 			title: "LinkedIn Mastery Course",
@@ -42,6 +44,7 @@ const PopularCourses = () => {
 			isAvailable: true,
 			price: 380,
 			image: "linkedin",
+			category: "Workshops",
 		},
 		{
 			title: "Google Sheets Course",
@@ -52,6 +55,7 @@ const PopularCourses = () => {
 			isAvailable: true,
 			price: 380,
 			image: "google_sheets",
+			category: "Workshops",
 		},
 	])
 
@@ -155,9 +159,15 @@ const PopularCourses = () => {
 					className="px-[16px] py-[25px] flex justify-start items-stretch gap-[25px] overflow-x-scroll no-scrollbar"
 					id="coursesList"
 				>
-					{courses.map((course) => (
-						<CourseCard key={course.title} course={course} />
-					))}
+					{courses
+						.filter(
+							(course) =>
+								course.category === selectedCategory ||
+								selectedCategory === "All Courses"
+						)
+						.map((course) => (
+							<CourseCard key={course.title} course={course} />
+						))}
 				</div>
 			</div>
 		</section>

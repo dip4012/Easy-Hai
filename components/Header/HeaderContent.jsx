@@ -3,10 +3,8 @@ const HeaderContent = () => {
 	return (
 		<div className="absolute z-[3] w-1/2 pt-[62.74px] max-[1420px]:w-full max-[1420px]:px-[20px] max-[1420px]:pb-[80.04px] max-[1420px]:pt-[53.12px] max-[1420px]:bottom-0 max-[1420px]:rounded-b-[25px] max-[1420px]:bg-gradient-to-b max-[1420px]:from-transparent max-[1420px]:via-[#8B20FF] max-[1420px]:via-70% max-[1420px]:to-[#6D1CC5] max-[1420px]:to-100% max-[1420px]:backdrop-blur-[1px]">
 			<h1 className="w-full text-white font-Raleway text-[64px] font-bold leading-[75px] max-[767px]:text-[50px] max-[400px]:text-[40px] max-[1000px]:leading-[60px] max-[767px]:leading-[48px]">
-				Courses Designed To Help Adults and Seniors Get Digitally{" "}
-				<span className="relative">
-					<span className="header_graphic">Independent</span>
-				</span>
+				Courses Designed to Help Adults and Seniors get Digitally Independent
+				<span className="header_graphic"></span>
 			</h1>
 
 			{/* <p className="w-[70%] mt-[30.82px] text-[#FFFDF5] font-Raleway text-base font-normal leading-[23px] max-[767px]:w-full max-[767px]:mt-[15px] max-[767px]:text-xs max-[767px]:font-extralight">

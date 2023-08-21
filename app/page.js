@@ -1,7 +1,7 @@
 "use client"
 
 // import dynamic from "next/dynamic"
-import DesktopCorporateSession from "@/components/Corporate Sessions/DesktopCorporateSession"
+import CorporateSession from "@/components/Corporate Sessions/CorporateSession"
 import Featured from "@/components/Featured Section/Featured"
 import Footer from "@/components/Footer/Footer"
 import FounderNote from "@/components/Founder Note/FounderNote"
@@ -33,7 +33,7 @@ export default function Home() {
 			<Reasoning />
 
 			{/* corporate sessions */}
-			<DesktopCorporateSession />
+			<CorporateSession />
 
 			{/* founder's note */}
 			<FounderNote />

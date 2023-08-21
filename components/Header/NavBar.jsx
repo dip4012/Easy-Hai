@@ -15,7 +15,7 @@ const NavBar = () => {
 			{/* navigation links and signin actions */}
 			<div className="h-full flex gap-[50.42px] justify-end items-center">
 				{/* navigation links */}
-				<div className="h-full flex gap-[60px] justify-center items-center max-[1230px]:hidden">
+				<div className="h-full flex gap-[40px] justify-center items-center max-[1230px]:hidden">
 					<Link
 						href="#"
 						className="text-white font-Raleway text-lg font-medium tracking-[0.36px] cursor-pointer"

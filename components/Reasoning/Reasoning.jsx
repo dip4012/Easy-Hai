@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import QualityCard from "./QualityCard"
 import {
 	BookOpen,
@@ -10,7 +10,6 @@ import {
 	Tablet,
 	User2,
 } from "lucide-react"
-import Image from "next/image"
 
 const Reasoning = () => {
 	const [listItems] = useState([
@@ -24,7 +23,7 @@ const Reasoning = () => {
 		{
 			title: "Expert Guidance",
 			text:
-				"Our courses are conducted by Shreya herself who specialize in demystifying tech concepts to make it practical and enjoyable for adults and seniors. teaching digital skills.",
+				"Our courses are led by Shreya herself, who specializes in demystifying technology concepts.",
 			color: "orange",
 			icon: <GraduationCap className="stroke-white stroke-2" />,
 		},
@@ -43,7 +42,7 @@ const Reasoning = () => {
 			icon: <Tablet className="stroke-white stroke-2" />,
 		},
 		{
-			title: "Community",
+			title: "Community Works",
 			text:
 				"Make tech buddies by joining the curated community of other learners and mentors.",
 			color: "purple",

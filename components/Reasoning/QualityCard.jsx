@@ -3,7 +3,7 @@ import Image from "next/image"
 const QualityCard = ({ item, position }) => {
 	return (
 		<div
-			className={`shrink-0 w-[243px] self-stretch text-center flex flex-col justify-start items-center ${position} transition-all ease-linear duration-1000`}
+			className={`shrink-0 w-[200px] self-stretch text-center flex flex-col justify-start items-center ${position} transition-all ease-linear duration-1000`}
 		>
 			<div className={`p-[15px] inline-block rounded-[10px] ${item.color}`}>
 				{item.icon}
